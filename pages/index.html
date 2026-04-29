@@ -1,18 +1,36 @@
 <!doctype html>
-<html lang="en">
+<html lang="km">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>POS Coffee</title>
     <link rel="stylesheet" href="/src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      .sidebar-transition {
+        transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .sidebar-transition {
+        transition: width 0.3s ease;
+      }
+
+      #main-content {
+        transition: margin-left 0.3s ease;
+      }
+    </style>
   </head>
   <body class="bg-[#f8f8f8]">
-    <aside class="bg-white w-64 h-screen">
-      <div class="text-center pt-5 text-[16px] font-bold text-[#2c2c2c]">
-        POS Coffee
-      </div>
-    </aside>
+    <div id="sidebar-container"></div>
 
-    <main class="bg-[#f8f8f8]"></main>
+    <main id="main-content" class="ml-64 p-8 transition-all duration-300">
+      <div class="pl-[20px] max-w-[300px] h-[30px] bg-gray-200">d</div>
+    </main>
+
+    <script src="/js/sidebar.js"></script>
   </body>
 </html>
