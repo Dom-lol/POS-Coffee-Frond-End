@@ -9,10 +9,10 @@
 
   <body class="bg-[#f8f8f8]">
     <form action="">
-      <main class="flex justify-center items-center h-screen p-5">
+      <main class="flex justify-center items-center h-screen p-5 gap-5">
         <!-- Hero Image -->
         <section
-          class="w-[450px] h-[500px] overflow-hidden rounded-l-xl shadow-md hidden md:block"
+          class="w-[450px] h-[500px] overflow-hidden rounded-xl shadow-md hidden md:block"
         >
           <img
             src="/img/top-view-hot-espresso-with-brown-coffee-seeds-brown-wooden-desk-coffee-cup-drink.jpg"
@@ -23,7 +23,7 @@
 
         <!-- Login Form -->
         <section
-          class="w-[400px] h-[500px] bg-white rounded-r-xl shadow-md flex items-center"
+          class="w-[400px] h-[500px] bg-white rounded-xl shadow-md flex items-center"
         >
           <div class="w-full p-10">
             <!-- Title -->
@@ -39,45 +39,30 @@
                 type="text"
                 placeholder="Enter your ID"
                 class="w-full mt-1 p-3 border rounded-lg bg-gray-100 outline-none focus:ring-2 focus:ring-brown-400"
-                required
               />
             </div>
 
-            <!-- Role -->
+            <!-- PIN -->
             <div class="mb-6">
-              <label class="text-sm text-gray-600">Select Role</label>
-              <select
-                name=""
-                id=""
-                class="w-full mt-1 p-3 border rounded-lg bg-gray-100 outline-none focus:ring-2 focus:ring-brown-400"
-                required
-              >
-                <option value="staff">Staff</option>
-                <option value="manager">Manager</option>
-                <option value="admin">Admin</option>
-              </select>
-            </div>
-
-            <!-- Password -->
-            <div class="mb-6">
-              <label class="text-sm text-gray-600">Password</label>
+              <label class="text-sm text-gray-600">PIN</label>
               <input
                 type="password"
                 placeholder="Enter PIN"
                 class="w-full mt-1 p-3 border rounded-lg bg-gray-100 outline-none focus:ring-2 focus:ring-brown-400"
-                required
               />
             </div>
 
             <!-- Login Button -->
             <button
-              class="w-full bg-[#6b4f4f] text-white py-3 rounded-lg hover:bg-[#5a3f3f] transition cursor-pointer"
+              class="w-full bg-[#6b4f4f] text-white py-3 rounded-lg hover:bg-[#5a3f3f] transition"
             >
               Login
             </button>
 
-            <!-- link page -->
-            <div><a href="/pages/index.html">Link page</a></div>
+            <!-- Extra -->
+            <div class="text-center mt-5 text-sm text-gray-400">
+              Last user: cashier01
+            </div>
           </div>
         </section>
       </main>
