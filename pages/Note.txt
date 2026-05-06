@@ -1,0 +1,48 @@
+
+==> Menu Detail
+
+    -Coffee {
+        [Hot]
+        Espresso            — $1.25
+        Americano           — $1.50
+        Cappuccino          — $2.00
+        Latte               — $2.20
+        Mocha               — $2.50
+
+        [Ice]
+        Iced Americano      — $1.80
+        Iced Latte          — $2.50
+        Caramel Iced Latte  — $2.80
+        Vanilla Iced Latte  — $2.80
+        Hazelnut Iced Latte — $2.80
+
+        [Frap]
+        Coffee Frappé       — $3.00
+        Caramel Frappé      — $3.20
+        Mocha Frappé        — $3.50
+    }
+
+    -Tea {
+        
+        Green Tea           — $1.50
+        Lemon Tea           — $1.80
+        Milk Tea            — $2.20
+        Peach Tea           — $2.00
+        Thai Tea            — $2.30
+        Jasmine Tea         — $1.70
+        Honey Tea           — $2.00
+
+        [Frap]
+        Matcha Frappé       — $3.20
+        Milk Tea Frappé     — $3.00
+        Strawberry Frappé   — $3.20
+    }
+
+    -Snack {
+        Croissant           — $1.50
+        Donut               — $1.20
+        Chocolate Cake      — $2.50
+        Cheese Cake         — $2.80
+        Muffin              — $1.80
+    }
+

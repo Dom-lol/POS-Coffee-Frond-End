@@ -557,6 +557,9 @@
     }
   }
 }
+body {
+  background-color: red;
+}
 @property --tw-translate-x {
   syntax: "*";
   inherits: false;
