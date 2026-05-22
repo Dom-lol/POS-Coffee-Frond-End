@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
         class="w-8 h-8 bg-[#6b4f4f] rounded-full flex items-center justify-center hover:bg-[#5a3f3f]">
         <i id="toggle-icon" class="fas fa-chevron-left text-xs"></i>
       </button>
-    </div>
+    </div>        
 
     <!-- Menu -->
     <div class="flex-grow space-y-2">

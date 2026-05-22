@@ -27,25 +27,69 @@
   <body class="bg-[#f8f8f8]">
     <div id="sidebar-container"></div>
 
-    <main id="main-content" class="ml-64 p-8 transition-all duration-300">
+    <main id="main-content" class="ml-64 px-8 py-3 transition-all duration-300">
       <!-- header -->
-      <section>
-        <header>
+      <section class="">
+        <header class="flex justify-between items-center">
           <!-- Search btn -->
-          <div></div>
+          <div
+            class="flex justify-between items-center bg-gray-300 w-[600px] h-[50px] rounded-[40px]"
+          >
+            <div class="items-center flex pl-10 gap-2">
+              <div><i class="fa-solid fa-magnifying-glass"></i></div>
+              <input
+                type="search"
+                class="w-[400px] h-[50px] outline-none"
+                placeholder="Search..."
+              />
+            </div>
+            <div
+              class="bg-[#6b4f4f] w-[150px] h-[50px] rounded-[40px] flex items-center justify-center"
+            >
+              Filter
+            </div>
+          </div>
           <!-- Profile and img-->
-          <div></div>
+          <div>
+            <div
+              class="flex justify-center items-center bg-gray-100 w-[200px] h-[70px] rounded"
+            >
+              <div class="p-2">
+                <div
+                  class="bg-red-950 w-[60px] h-[60px] rounded-[50%] flex items-center justify-center text-white"
+                >
+                  PF
+                </div>
+              </div>
+              <div class="font-bold pr-2">Chea Oudom</div>
+            </div>
+          </div>
         </header>
       </section>
 
       <!-- Smart select feature  -->
-      <!-- <section class="flex justify-center gap-[50px]">
-        <div class="pl-[20px] max-w-[300px] h-[30px] bg-gray-200">SEARCH</div>
-
-        <div class="pl-[20px] max-w-[300px] h-[30px] bg-gray-200">SEARCH</div>
-        <div class="pl-[20px] max-w-[300px] h-[30px] bg-gray-200">SEARCH</div>
-        <div class="pl-[20px] max-w-[300px] h-[30px] bg-gray-200">SEARCH</div>
-      </section> -->
+      <section class="flex gap-[10px] py-5">
+        <div
+          class="w-[150px] h-[40px] bg-gray-200 rounded-[30px] flex items-center justify-center"
+        >
+          Loy
+        </div>
+        <div
+          class="w-[150px] h-[40px] bg-gray-200 rounded-[30px] flex items-center justify-center"
+        >
+          Loy
+        </div>
+        <div
+          class="w-[150px] h-[40px] bg-gray-200 rounded-[30px] flex items-center justify-center"
+        >
+          Loy
+        </div>
+        <div
+          class="w-[150px] h-[40px] bg-gray-200 rounded-[30px] flex items-center justify-center"
+        >
+          Loy
+        </div>
+      </section>
 
       <!-- Categ and Menu -->
       <section></section>
