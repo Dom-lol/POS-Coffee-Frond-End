@@ -2,121 +2,403 @@
 <html lang="km">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>POS Coffee</title>
-    <link rel="stylesheet" href="/src/output.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <style>
-      .sidebar-transition {
-        transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      }
       .no-scrollbar::-webkit-scrollbar {
         display: none;
       }
-      .sidebar-transition {
-        transition: width 0.3s ease;
-      }
-
       #main-content {
         transition: margin-left 0.3s ease;
       }
     </style>
   </head>
-  <body class="bg-[#f8f8f8]">
+  <body class="bg-[#f8f8f8] text-[#2c2c2c]">
     <div id="sidebar-container"></div>
 
-    <main id="main-content" class="ml-64 px-8 py-3 transition-all duration-300">
-      <!-- header -->
-      <section class="">
-        <header class="flex justify-between items-center">
-          <!-- Search btn -->
+    <main id="main-content" class="ml-64 px-8 py-6 transition-all duration-300">
+      <section class="mb-6">
+        <header class="flex justify-between items-center gap-4">
           <div
-            class="flex justify-between items-center bg-gray-300 w-[600px] h-[50px] rounded-[40px]"
+            class="flex justify-between items-center bg-gray-200/70 w-full max-w-[600px] h-[50px] rounded-[40px] pl-6 pr-1 shadow-sm border border-gray-200/50"
           >
-            <div class="items-center flex pl-10 gap-2">
-              <div><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div class="items-center flex gap-3 flex-1">
+              <i class="fa-solid fa-magnifying-glass text-gray-500"></i>
               <input
                 type="search"
-                class="w-[400px] h-[50px] outline-none"
-                placeholder="Search..."
+                class="w-full h-[40px] bg-transparent outline-none text-sm text-gray-700"
+                placeholder="Search ..."
               />
             </div>
-            <div
-              class="bg-[#6b4f4f] w-[150px] h-[50px] rounded-[40px] flex items-center justify-center"
+            <button
+              class="bg-[#6b4f4f] hover:bg-[#543d3d] text-sm font-medium text-white px-6 h-[42px] rounded-[40px] transition-colors flex items-center gap-2 shadow-md"
             >
-              <div class="text-white">Filter</div>
-            </div>
+              <i class="fa-solid fa-sliders"></i> Filter
+            </button>
           </div>
-          <!-- Profile and img-->
-          <div>
+
+          <div class="shrink-0">
             <div
-              class="flex justify-center items-center bg-gray-100 w-[200px] h-[70px] rounded"
+              class="flex items-center bg-white border border-gray-100 p-1.5 pr-5 rounded-full shadow-sm hover:shadow-md transition-shadow cursor-pointer"
             >
-              <div class="p-2">
-                <div
-                  class="bg-red-950 w-[60px] h-[60px] rounded-[50%] flex items-center justify-center text-white"
-                >
-                  PF
-                </div>
+              <div
+                class="bg-[#6b4f4f] w-11 h-11 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-inner"
+              >
+                CO
               </div>
-              <div class="font-bold pr-2">Chea Oudom</div>
+              <div class="font-bold text-sm ml-3 text-gray-700">Chea Oudom</div>
             </div>
           </div>
         </header>
       </section>
 
-      <!-- Smart select feature  -->
-      <section class="flex gap-[10px] py-5">
-        <div
-          class="w-[150px] h-[40px] bg-gray-200 hover:bg-[#6b4f4f] hover:text-white cursor-pointer rounded-[30px] flex items-center justify-center"
+      <section class="flex gap-3 py-4 overflow-x-auto no-scrollbar">
+        <button
+          class="px-8 h-[44px] bg-[#6b4f4f] text-white font-medium rounded-full shadow-md transition-all"
         >
-          Coffee
+          <i class="fa-solid fa-coffee mr-2"></i> Coffee
+        </button>
+        <button
+          class="px-8 h-[44px] bg-white border border-gray-200 text-gray-600 hover:bg-[#6b4f4f] hover:text-white font-medium rounded-full shadow-sm transition-all"
+        >
+          <i class="fa-solid fa-leaf mr-2"></i> Tea
+        </button>
+        <button
+          class="px-8 h-[44px] bg-white border border-gray-200 text-gray-600 hover:bg-[#6b4f4f] hover:text-white font-medium rounded-full shadow-sm transition-all"
+        >
+          <i class="fa-solid fa-cookie-bite mr-2"></i> Snacks
+        </button>
+        <button
+          class="px-8 h-[44px] bg-white border border-gray-200 text-gray-600 hover:bg-[#6b4f4f] hover:text-white font-medium rounded-full shadow-sm transition-all"
+        >
+          <i class="fa-solid fa-ice-cream mr-2"></i> Desserts
+        </button>
+      </section>
+
+      <section class="py-4">
+        <div class="flex justify-between items-center mb-6">
+          <div class="font-bold text-xl tracking-tight text-gray-800">
+            Coffee Menu
+          </div>
+          <span
+            class="text-xs text-gray-400 font-medium bg-gray-200/50 px-3 py-1 rounded-full"
+            >Show For items</span
+          >
         </div>
+
         <div
-          class="w-[150px] h-[40px] bg-gray-200 hover:bg-[#6b4f4f] hover:text-white cursor-pointer rounded-[30px] flex items-center justify-center"
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
         >
-          Tea
-        </div>
-        <div
-          class="w-[150px] h-[40px] bg-gray-200 hover:bg-[#6b4f4f] hover:text-white cursor-pointer rounded-[30px] flex items-center justify-center"
-        >
-          Snacks
-        </div>
-        <div
-          class="w-[150px] h-[40px] bg-gray-200 hover:bg-[#6b4f4f] hover:text-white cursor-pointer rounded-[30px] flex items-center justify-center"
-        >
-          Loy
+          <div
+            onclick="openOrderModal('Iced Latte', '2.50', 'Coffee Series')"
+            class="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group cursor-pointer"
+          >
+            <div
+              class="h-40 bg-orange-50/50 relative flex items-center justify-center p-4"
+            >
+              <i
+                class="fa-solid fa-mug-hot text-6xl text-[#6b4f4f]/20 transition-transform group-hover:scale-110 duration-300"
+              ></i>
+              <span
+                class="absolute top-3 right-3 bg-green-500 text-white text-[10px] font-bold px-2 py-0.5 rounded"
+                >Best Seller</span
+              >
+            </div>
+            <div
+              class="p-4 flex flex-col flex-1 justify-between gap-3 bg-white"
+            >
+              <div>
+                <h3
+                  class="font-bold text-gray-800 text-base group-hover:text-[#6b4f4f] transition-colors"
+                >
+                  Iced Latte
+                </h3>
+                <p class="text-xs text-gray-400 mt-0.5">
+                  Espresso with fresh milk
+                </p>
+              </div>
+              <div
+                class="flex justify-between items-center pt-2 border-t border-gray-50"
+              >
+                <span class="font-black text-base text-[#6b4f4f]">$ 2.50</span>
+                <button
+                  class="w-8 h-8 rounded-xl bg-gray-100 hover:bg-[#6b4f4f] hover:text-white transition-colors flex items-center justify-center text-gray-600"
+                >
+                  <i class="fa-solid fa-plus text-xs"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            onclick="openOrderModal('Americano', '2.00', 'Coffee Series')"
+            class="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group cursor-pointer"
+          >
+            <div
+              class="h-40 bg-orange-50/50 relative flex items-center justify-center p-4"
+            >
+              <i
+                class="fa-solid fa-mug-saucer text-6xl text-[#6b4f4f]/20 transition-transform group-hover:scale-110 duration-300"
+              ></i>
+            </div>
+            <div
+              class="p-4 flex flex-col flex-1 justify-between gap-3 bg-white"
+            >
+              <div>
+                <h3
+                  class="font-bold text-gray-800 text-base group-hover:text-[#6b4f4f] transition-colors"
+                >
+                  Americano
+                </h3>
+                <p class="text-xs text-gray-400 mt-0.5">
+                  Rich shot of espresso with water
+                </p>
+              </div>
+              <div
+                class="flex justify-between items-center pt-2 border-t border-gray-50"
+              >
+                <span class="font-black text-base text-[#6b4f4f]">$ 2.00</span>
+                <button
+                  class="w-8 h-8 rounded-xl bg-gray-100 hover:bg-[#6b4f4f] hover:text-white transition-colors flex items-center justify-center text-gray-600"
+                >
+                  <i class="fa-solid fa-plus text-xs"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            onclick="openOrderModal('Cappuccino', '2.75', 'Coffee Series')"
+            class="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group cursor-pointer"
+          >
+            <div
+              class="h-40 bg-orange-50/50 relative flex items-center justify-center p-4"
+            >
+              <i
+                class="fa-solid fa-glass-water text-6xl text-[#6b4f4f]/20 transition-transform group-hover:scale-110 duration-300"
+              ></i>
+            </div>
+            <div
+              class="p-4 flex flex-col flex-1 justify-between gap-3 bg-white"
+            >
+              <div>
+                <h3
+                  class="font-bold text-gray-800 text-base group-hover:text-[#6b4f4f] transition-colors"
+                >
+                  Cappuccino
+                </h3>
+                <p class="text-xs text-gray-400 mt-0.5">
+                  Espresso with steamed milk foam
+                </p>
+              </div>
+              <div
+                class="flex justify-between items-center pt-2 border-t border-gray-50"
+              >
+                <span class="font-black text-base text-[#6b4f4f]">$ 2.75</span>
+                <button
+                  class="w-8 h-8 rounded-xl bg-gray-100 hover:bg-[#6b4f4f] hover:text-white transition-colors flex items-center justify-center text-gray-600"
+                >
+                  <i class="fa-solid fa-plus text-xs"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            onclick="openOrderModal('Caramel Frappe', '3.25', 'Blended Series')"
+            class="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group cursor-pointer"
+          >
+            <div
+              class="h-40 bg-orange-50/50 relative flex items-center justify-center p-4"
+            >
+              <i
+                class="fa-solid fa-blender text-6xl text-[#6b4f4f]/20 transition-transform group-hover:scale-110 duration-300"
+              ></i>
+            </div>
+            <div
+              class="p-4 flex flex-col flex-1 justify-between gap-3 bg-white"
+            >
+              <div>
+                <h3
+                  class="font-bold text-gray-800 text-base group-hover:text-[#6b4f4f] transition-colors"
+                >
+                  Caramel Frappe
+                </h3>
+                <p class="text-xs text-gray-400 mt-0.5">
+                  Blended coffee with caramel syrup
+                </p>
+              </div>
+              <div
+                class="flex justify-between items-center pt-2 border-t border-gray-50"
+              >
+                <span class="font-black text-base text-[#6b4f4f]">$ 3.25</span>
+                <button
+                  class="w-8 h-8 rounded-xl bg-gray-100 hover:bg-[#6b4f4f] hover:text-white transition-colors flex items-center justify-center text-gray-600"
+                >
+                  <i class="fa-solid fa-plus text-xs"></i>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- Categ and Menu -->
-      <section class="py-6">
-        <div class="font-bold text-[20px]">Coffee Menu</div>
-        <!-- Menu Card -->
-        <section class="py-5 flex gap-5">
-          <div class="bg-gray-300 w-[400px] h-[250px] rounded">d</div>
-          <div class="bg-gray-300 w-[400px] h-[250px] rounded">d</div>
-        </section>
-        <section class="py-3 flex gap-5">
-          <div class="bg-gray-300 w-[400px] h-[250px] rounded">d</div>
-          <div class="bg-gray-300 w-[400px] h-[250px] rounded">d</div>
-        </section>
-      </section>
-
-      <!-- Order Preview -->
-      <section>
-        <!-- Order Detail -->
-        <div></div>
-        <!-- Pay  -->
-        <div></div>
-      </section>
-
-      <!-- Footer -->
-      <footer></footer>
+      <section class="mt-8"></section>
     </main>
 
+    <!-- Modal -->
+    <!-- Preview Order Modal -->
+    <div
+      class="fixed flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm transition-all duration-300 opacity-0"
+      id="Preview_Order-modal"
+    >
+      <div>hdsijnferasdnjwd</div>
+    </div>
+
+    <!-- Add Order Modal -->
+    <div
+      id="order-modal"
+      class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm transition-all duration-300 opacity-0"
+    >
+      <div
+        class="bg-white w-full max-w-md rounded-2xl shadow-2xl overflow-hidden transform scale-95 transition-all duration-300 max-h-[90vh] flex flex-col"
+      >
+        <div
+          class="p-5 border-b border-gray-100 flex justify-between items-center bg-[#6b4f4f] text-white"
+        >
+          <div>
+            <h3 id="modal-item-name" class="font-bold text-lg">Iced Latte</h3>
+            <p id="modal-item-category" class="text-xs opacity-80">Coffee</p>
+          </div>
+          <button
+            id="close-modal"
+            class="w-8 h-8 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center transition-colors"
+          >
+            <i class="fa-solid fa-xmark text-sm"></i>
+          </button>
+        </div>
+
+        <div class="p-6 space-y-6 overflow-y-auto no-scrollbar flex-1">
+          <div class="space-y-3">
+            <label class="block text-sm font-bold text-gray-700"
+              ><i class="fa-solid fa-cubes text-amber-500 mr-2"></i>
+              Sweet</label
+            >
+            <div class="grid grid-cols-4 gap-2">
+              <button
+                class="sweetness-opt border border-gray-200 p-2 rounded-xl text-xs font-semibold hover:border-[#6b4f4f] transition-all text-center"
+                data-val="0%"
+              >
+                0%
+              </button>
+              <button
+                class="sweetness-opt border border-gray-200 p-2 rounded-xl text-xs font-semibold hover:border-[#6b4f4f] transition-all text-center"
+                data-val="25%"
+              >
+                25%
+              </button>
+              <button
+                class="sweetness-opt border-[#6b4f4f] bg-[#6b4f4f]/5 text-[#6b4f4f] p-2 rounded-xl text-xs font-bold text-center"
+                data-val="100%"
+              >
+                100% (Normal)
+              </button>
+              <button
+                class="sweetness-opt border border-gray-200 p-2 rounded-xl text-xs font-semibold hover:border-[#6b4f4f] transition-all text-center"
+                data-val="120%"
+              >
+                120%
+              </button>
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <label class="block text-sm font-bold text-gray-700"
+              ><i class="fa-solid fa-glass-water text-blue-500 mr-2"></i>
+              Size</label
+            >
+            <div class="space-y-2">
+              <label
+                class="flex items-center justify-between p-3 border border-[#6b4f4f] bg-[#6b4f4f]/5 rounded-xl cursor-pointer size-opt"
+              >
+                <div class="flex items-center gap-3">
+                  <input
+                    type="radio"
+                    name="size"
+                    value="Regular"
+                    checked
+                    class="accent-[#6b4f4f]"
+                  />
+                  <span class="text-sm font-semibold">Regular Size</span>
+                </div>
+                <span class="text-sm font-bold text-gray-400">+$ 0.00</span>
+              </label>
+              <label
+                class="flex items-center justify-between p-3 border border-gray-200 rounded-xl cursor-pointer size-opt hover:bg-gray-50"
+              >
+                <div class="flex items-center gap-3">
+                  <input
+                    type="radio"
+                    name="size"
+                    value="Large"
+                    class="accent-[#6b4f4f]"
+                  />
+                  <span class="text-sm font-semibold">Large Size</span>
+                </div>
+                <span class="text-sm font-bold text-[#6b4f4f]">+$ 0.50</span>
+              </label>
+            </div>
+          </div>
+
+          <div
+            class="flex items-center justify-between pt-4 border-t border-gray-100"
+          >
+            <span class="text-sm font-bold text-gray-700">Quantity</span>
+            <div class="flex items-center gap-4 bg-gray-100 p-1.5 rounded-full">
+              <button
+                id="minus-qty"
+                class="w-8 h-8 rounded-full bg-white shadow-sm flex items-center justify-center font-bold hover:bg-gray-50"
+              >
+                -
+              </button>
+              <span id="item-qty" class="font-bold text-base w-6 text-center"
+                >1</span
+              >
+              <button
+                id="plus-qty"
+                class="w-8 h-8 rounded-full bg-white shadow-sm flex items-center justify-center font-bold hover:bg-gray-50"
+              >
+                +
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 border-t border-gray-100 bg-gray-50 flex gap-3">
+          <div class="flex-1">
+            <span class="text-xs text-gray-400 block font-medium"
+              >Total Price</span
+            >
+            <span
+              id="modal-total-price"
+              class="text-xl font-black text-[#6b4f4f]"
+              >$ 2.50</span
+            >
+          </div>
+          <button
+            id="add-to-cart-btn"
+            class="bg-[#6b4f4f] hover:bg-[#543d3d] text-white font-bold px-8 rounded-xl shadow-md transition-colors flex items-center gap-2 text-sm"
+          >
+            <i class="fa-solid fa-cart-plus"></i> Add
+          </button>
+        </div>
+      </div>
+    </div>
     <script src="/js/sidebar.js"></script>
+    <script src="/js/modal.js"></script>
   </body>
 </html>
